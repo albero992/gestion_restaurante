@@ -1,16 +1,22 @@
-# This is a sample Python script.
+from menu import agregar_plato, mostrar_menu
 
-# Press Ctrl+F5 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+def main():
+    while True:
+        print("\n1. Agregar Plato\n2. Ver Menú\n3. Salir")
+        opcion = input("Elige una opción: ")
 
+        if opcion == "1":
+            nombre = input("Nombre del plato: ")
+            precio = float(input("Precio: "))
+            categoria = input("Categoría: ")
+            agregar_plato(nombre, precio, categoria)
+        elif opcion == "2":
+            mostrar_menu()
+        elif opcion == "3":
+            break
+        else:
+            print("Opción inválida")
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press F9 to toggle the breakpoint.
+if __name__ == "__main__":
+    main()
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
